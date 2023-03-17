@@ -26,8 +26,12 @@ For network communication [UnityWebRequest](https://docs.unity3d.com/ScriptRefer
 
 ## Usage
 You can download project from a git url with command:
-*`git clone https://github.com/Sergiy-Ok/onix-model-viewer.git`*
+*`git clone https://github.com/Onix-Systems/unity-sonar-viewer.git`*
 
 ## License
+Distributed under the MIT License. See [LICENSE](https://github.com/Onix-Systems/unity-sonar-viewer/blob/dev/LICENSE) for more information.
 
 ## Contact
+Project Link: [https://github.com/Onix-Systems/unity-sonar-viewer](https://github.com/Onix-Systems/unity-sonar-viewer)
+
+Contucts: [sales@onix-systems.com](https://onix-systems.com/contact-us)
