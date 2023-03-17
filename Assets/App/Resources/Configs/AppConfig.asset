@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b131cac98a724d4a985cb3c203d86b3, type: 3}
+  m_Name: AppConfig
+  m_EditorClassIdentifier: 
+  <TargetFrameRate>k__BackingField: 60
+  <ContactUsUrl>k__BackingField: https://onix-systems.com/contact-us
+  <InputConfig>k__BackingField:
+    <SelectableObjectLayers>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 8
+    <RelativeSwipeDelta>k__BackingField: 0.1
+  <ARViewerConfig>k__BackingField:
+    <MinScanSeconds>k__BackingField: 3
+    <ARPlaneMinSquareSize>k__BackingField: 1
+    <ShowARPlanes>k__BackingField: 1
+    <ARPlanePrefab>k__BackingField: {fileID: 5400420233885098605, guid: 95d8413ce7122994c97b213f317723d4, type: 3}
+    <ModelLayer>k__BackingField:
+      _layerIndex: 3
+    <ModelSpawnSize>k__BackingField: 1
+    <ModelMoveSmooth>k__BackingField: 8
+    <ModelRotationSwipeFactor>k__BackingField: -0.2
+    <ModelRotationSmooth>k__BackingField: 16
+    <ModelScalePinchFactor>k__BackingField: 0.001
+    <ModelScaleSmooth>k__BackingField: 16
+    <ModelMinimumScale>k__BackingField: 0.01
+    <ModelMaximumScale>k__BackingField: 5
+  <NetworkConfig>k__BackingField:
+    <NetworkSettings>k__BackingField:
+      <DefaultRequestTimeoutSeconds>k__BackingField: 30
+    <SketchfabSettings>k__BackingField:
+      <Client>k__BackingField:
+        <Id>k__BackingField: MgY9nnsYaL9c0rBaxj6eUmkWLUGGZBylvmBvoNMN
+        <Secret>k__BackingField: J7NQxhXXB3jhQhnpmz9k7LCi8CIwmw9hRl19bGLEIo7GXh2yewzcIdqRrpddFIdr9ylhHvp0uj8TNf4Z6vJnANNDiFZ9YsqNmWJ2oNQdePIWDxRtXTvTUAg44VqIaBR6
+  <UIConfig>k__BackingField:
+    <PreviewScreenVisibleTime>k__BackingField: 2
+    <DownloadProgressCloseDelay>k__BackingField: 3
+    <Texts>k__BackingField:
+      _items:
+      - <Key>k__BackingField: StartDownloading
+        <Value>k__BackingField: Start model downloading...
+      - <Key>k__BackingField: Downloading
+        <Value>k__BackingField: Model downloading {0:00.0}%
+      - <Key>k__BackingField: Downloaded
+        <Value>k__BackingField: Model Downloaded
+      - <Key>k__BackingField: Processing
+        <Value>k__BackingField: Model data processing...
+      - <Key>k__BackingField: ModelLoading
+        <Value>k__BackingField: Model loading...
+      - <Key>k__BackingField: ModelLoadingCompleted
+        <Value>k__BackingField: Model loading completed
+      - <Key>k__BackingField: ModelLoadingError
+        <Value>k__BackingField: Error happened during model loading
+      - <Key>k__BackingField: 401
+        <Value>k__BackingField: Incorrect username or password
+      - <Key>k__BackingField: Unknown Error
+        <Value>k__BackingField: Unknown Error happened
+      - <Key>k__BackingField: Message - ScanEnvironment
+        <Value>k__BackingField: Please, scan your environment to detect surfaces.
+      - <Key>k__BackingField: Message - PositionateModel
+        <Value>k__BackingField: Positionate object on surface and tap to place it
+          (also you can rotate object with left/right swipes).
+      - <Key>k__BackingField: Message - EditModelTransform
+        <Value>k__BackingField: Change model position on surface with drag. Rotate
+          model with two-finger swipe. Scale model with pinch.
+  <Defaults>k__BackingField:
+    <ModelSearchMaxVertices>k__BackingField: 500000
+    <ModelSearchTextureMaxResolution>k__BackingField: 4096
+    <ModelSearchQuery>k__BackingField: Space
+    <SketchafabMockCredentials>k__BackingField:
+      <Email>k__BackingField: bobrider@tutanota.com
+      <Password>k__BackingField: nJ4s9_wSa1
+      <GrantType>k__BackingField: password

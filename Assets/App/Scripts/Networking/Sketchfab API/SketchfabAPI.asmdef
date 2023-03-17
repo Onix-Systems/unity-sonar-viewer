@@ -1,0 +1,17 @@
+{
+    "name": "SketchfabAPI",
+    "rootNamespace": "SketchfabAPI",
+    "references": [
+        "GUID:e86a7e3d33c2dfc46beb3b9cd1866657",
+        "GUID:9069ac25d95ca17448a247f3bb1c769f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
