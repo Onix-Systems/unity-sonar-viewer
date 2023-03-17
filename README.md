@@ -24,9 +24,11 @@ For 3D-model import (in .glb format) [glTFast](https://github.com/atteneder/glTF
 
 For network communication [UnityWebRequest](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequest.html) is used.
 
-## Usage
-You can download project from a git url with command:
-*`git clone https://github.com/Onix-Systems/unity-sonar-viewer.git`*
+## Installation
+Clone the repo
+   ```sh
+   git clone https://github.com/Onix-Systems/unity-sonar-viewer.git
+   ```
 
 ## License
 Distributed under the MIT License. See [LICENSE](https://github.com/Onix-Systems/unity-sonar-viewer/blob/dev/LICENSE) for more information.
@@ -34,4 +36,4 @@ Distributed under the MIT License. See [LICENSE](https://github.com/Onix-Systems
 ## Contact
 Project Link: [https://github.com/Onix-Systems/unity-sonar-viewer](https://github.com/Onix-Systems/unity-sonar-viewer)
 
-Contucts: [sales@onix-systems.com](https://onix-systems.com/contact-us)
+Contact us: [sales@onix-systems.com](https://onix-systems.com/contact-us)
