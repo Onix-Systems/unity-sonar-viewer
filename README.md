@@ -6,7 +6,7 @@
 
 Sonar Viewer is a demo project that shows our aproach in unity project development. Here you can find our typical project organization, architecture and code style.
 
-Basically, it is an app for 3D-model viewing in augmented reality. Models are downloaded from Sketchfab API in .glb format, so Sketchfab credentials needed (email and password). App allows user to filter models by name, vertices count, texture size and license type. Search results represented as a paginated list of model names. User can choose model from the list to download it. 
+Basically, it is an app for 3D-model viewing in augmented reality. Models are downloaded from Sketchfab API in .glb format, so Sketchfab credentials needed (email and password). App allows user to filter models by name, vertices count, texture size and license type. Search results represented as a paginated list of model names. User can choose model from the list and download it. 
 
 Augmeneted model viewing process consists of three phases:
 1. Environment Scanning - process of AR planes searching;
