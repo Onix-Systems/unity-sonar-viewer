@@ -203,7 +203,7 @@ namespace RestHTTP
             object payload = null,
             Action<RequestProgressData> onProgress = null,
             TimeSpan? timeout = null,
-            CancellationToken token = default)
+            CancellationToken cancellationtoken = default)
         {
             HTTPRequest httpRequest = new HTTPRequest(url, HTTPMethod.Delete);
 
@@ -222,7 +222,7 @@ namespace RestHTTP
 
             httpRequest.OnDownloadProgress += onProgress;
 
-            Result result = await SendAsync(httpRequest, token);
+            Result result = await SendAsync(httpRequest, cancellationtoken);
             return result;
         }
 

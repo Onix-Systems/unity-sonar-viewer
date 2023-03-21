@@ -112,7 +112,7 @@ namespace App.Core.States
             menuScreenView.OnModelSearchClicked += () =>
             {
                 mainContext.Get<ARViewer>().ResetViewer();
-                AppStateNavigator.GoTo<ModelLoadState>();
+                AppStateNavigator.GoTo<ModelSearchState>();
             };
 
             menuScreenView.OnAboutClicked += () =>

@@ -5,7 +5,7 @@ using UnityEngine.XR.ARFoundation;
 using App.Infrastructure.Contexts;
 using App.Services.ModelARViewing;
 
-namespace App.Contexts
+namespace App.Core.Contexts
 {
     public class AROriginContext : Context
     {

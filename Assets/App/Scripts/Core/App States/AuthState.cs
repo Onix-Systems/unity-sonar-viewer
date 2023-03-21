@@ -79,7 +79,7 @@ namespace App.Core.States
             data.SketchfabAccessToken = accessTokenEntity;
             data.LastAuthCredentials = credentials;
             
-            AppStateNavigator.GoTo<ModelLoadState>();
+            AppStateNavigator.GoTo<ModelSearchState>();
         }
 
         private void OnLoginFailed(Result<AccessTokenEntity> response)

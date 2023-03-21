@@ -2,19 +2,20 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using GLTFast;
+using System.Threading;
 
 namespace App.Services.ModelARViewing.ModelLoading
 {
     public class GLTFastGlbModelLoader : IGlbModelLoader
     {
-        public ModelObject LoadModel(byte[] modelData)
+        public Model LoadModel(byte[] modelData)
         {
-            return new ModelObject(new GameObject());
+            return new Model(new GameObject());
         }
 
-        public async Task<ModelObject> LoadModelAsync(byte[] modelData)
+        public async Task<Model> LoadModelAsync(byte[] modelData, CancellationToken cancellationToken)
         {
-            ModelObject model = null;
+            Model model = null;
             GltfImport gltfImport = new GltfImport();
 
             bool success = await gltfImport.LoadGltfBinary(modelData);
@@ -23,12 +24,12 @@ namespace App.Services.ModelARViewing.ModelLoading
 
             if (success)
             {
-                success = await gltfImport.InstantiateSceneAsync(gameObjectRoot.transform);
+                success = await gltfImport.InstantiateSceneAsync(gameObjectRoot.transform, cancellationToken: cancellationToken);
             }
 
             if (success)
             {
-                model = new ModelObject(gameObjectRoot);
+                model = new Model(gameObjectRoot);
             }
 
             return model;

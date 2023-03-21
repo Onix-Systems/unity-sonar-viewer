@@ -20,6 +20,7 @@ namespace RestHTTP
                 return responseResult;
             }
 
+            responseResult.Aborted = httpResponse.RequestAborted;
             responseResult.IsSuccess = httpResponse.IsSuccess;
             responseResult.Message = httpResponse.Error;
             responseResult.StatusCode = httpResponse.StatusCode;
@@ -50,6 +51,7 @@ namespace RestHTTP
                 responseResult.IsSuccess = false;
             }
 
+            responseResult.Aborted = httpResponse.RequestAborted;
             responseResult.Message = httpResponse.Error;
             responseResult.StatusCode = httpResponse.StatusCode;
 

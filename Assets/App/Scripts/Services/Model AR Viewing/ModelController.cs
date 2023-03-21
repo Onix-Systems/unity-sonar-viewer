@@ -11,7 +11,7 @@ namespace App.Services.ModelARViewing
     {
         [SerializeField] private Transform _root;
 
-        public ModelObject Model { get; private set; }
+        public Model Model { get; private set; }
 
         private ARAnchor _arPlaneAnchor;
         private Coroutine _rootMoveCo;
@@ -29,7 +29,7 @@ namespace App.Services.ModelARViewing
             SetModelVisible(false);
         }
 
-        public void SetModel(ModelObject model)
+        public void SetModel(Model model)
         {
             IContext mainContext = MainContext.Instance;
             ARViewerConfig config = mainContext.Get<AppConfig>().ARViewerConfig;
@@ -244,7 +244,7 @@ namespace App.Services.ModelARViewing
             _modelTransform.localScale = Vector3.one;
         }
 
-        private void AdjustModelScale(ModelObject model)
+        private void AdjustModelScale(Model model)
         {
             IContext mainContext = MainContext.Instance;
             ARViewerConfig config = mainContext.Get<AppConfig>().ARViewerConfig;

@@ -1,7 +1,7 @@
 ﻿
 using App.Infrastructure.UI;
 
-namespace App.Contexts.UI
+namespace App.UI.Contexts
 {
     public class PopupsContext : ViewsContext<PopupView>
     {

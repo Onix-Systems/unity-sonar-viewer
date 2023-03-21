@@ -1,10 +1,10 @@
 ﻿
 using System.Collections.Generic;
+using UnityEngine;
 using App.Infrastructure.Contexts;
 using App.Infrastructure.UI;
-using UnityEngine;
 
-namespace App.Contexts.UI
+namespace App.UI.Contexts
 {
     [DisallowMultipleComponent]
     public abstract class ViewsContext<TView> : Context, IViewsFetcher where TView : View

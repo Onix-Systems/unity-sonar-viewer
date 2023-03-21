@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace App.Services.ModelARViewing
 {
-    public class ModelObject
+    public class Model
     {
         public GameObject Rig { get; private set; }
         public Bounds Bounds { get; private set; }
 
         private GameObject _modelOriginGO;
 
-        public ModelObject(GameObject modelGameObject, bool isActive = false)
+        public Model(GameObject modelGameObject, bool isActive = false)
         {
             _modelOriginGO = modelGameObject;
             Rig = new GameObject(_modelOriginGO.name + " - Rig");

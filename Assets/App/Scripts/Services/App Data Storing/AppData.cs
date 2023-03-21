@@ -20,11 +20,17 @@ namespace App.Services.AppDataStoring
             }
         };
 
-        private AccessTokenEntity _sketchfabAccessToken;
-        private ModelEntity _selectedModel;
-        private ModelObject _loadedModelObject;
-        private SearchDTO _lastSearchParameters;
-        private CredentialsDTO _lastAuthCredentials;
+        [JsonIgnore]
+        public Model LoadedModelObject { get; set; }
+
+        [JsonIgnore]
+        public ModelEntity SelectedModel { get; set; }
+
+        [JsonIgnore]
+        public SearchResultsEntity LastSearchResults { get; set; }
+
+        [JsonIgnore]
+        public bool IsDirty { get; set; }
 
         public AccessTokenEntity SketchfabAccessToken 
         {
@@ -37,28 +43,6 @@ namespace App.Services.AppDataStoring
             }
         }
 
-        [JsonIgnore]
-        public ModelObject LoadedModelObject
-        {
-            get => _loadedModelObject;
-            
-            set
-            {
-                _loadedModelObject = value;
-                IsDirty = true;
-            }
-        }
-
-        [JsonIgnore]
-        public ModelEntity SelectedModel
-        {
-            get => _selectedModel;
-            set
-            {
-                _selectedModel = value;
-                IsDirty = true;
-            }
-        }
 
         public SearchDTO LastSearchParameters
         {
@@ -82,8 +66,9 @@ namespace App.Services.AppDataStoring
             }
         }
 
-        [JsonIgnore]
-        public bool IsDirty { get; set; }
+        private AccessTokenEntity _sketchfabAccessToken;
+        private SearchDTO _lastSearchParameters;
+        private CredentialsDTO _lastAuthCredentials;
 
         public static implicit operator AppData(string json)
         {

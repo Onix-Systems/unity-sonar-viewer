@@ -11,7 +11,7 @@ namespace App.Services.ModelARViewing
 {
     public class ARViewer: IInitializable, IDisposable
     {
-        public ModelObject Model { get; private set; }
+        public Model Model { get; private set; }
         public ARPlane TargetARPlane { get; set; }
         public IARViewerState State => MainContext.Instance.Get<ARViewerStateMachine>().CurrentState;
         public bool ARPlanesDetected => MainContext.Instance.Get<ARPlanesProvider>().ARPlanesCount > 0;
@@ -63,7 +63,7 @@ namespace App.Services.ModelARViewing
             fsm.SetState(state);
         }
 
-        public void SetModelPositioning(ModelObject model)
+        public void SetModelPositioning(Model model)
         {
             IContext mainContext = MainContext.Instance;
             ARViewerStateMachine fsm = mainContext.Get<ARViewerStateMachine>();
@@ -73,7 +73,7 @@ namespace App.Services.ModelARViewing
             fsm.SetState(state);
         }
 
-        public void SetModelTransfromEdit(ModelObject model)
+        public void SetModelTransfromEdit(Model model)
         {
             IContext mainContext = MainContext.Instance;
             ARViewerStateMachine fsm = mainContext.Get<ARViewerStateMachine>();

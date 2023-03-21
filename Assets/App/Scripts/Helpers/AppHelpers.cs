@@ -10,6 +10,7 @@ using App.Infrastructure.Contexts;
 using App.Services.Input;
 using App.Services;
 using UnityEngine.XR.ARFoundation;
+using System.Threading;
 
 namespace App.Helpers
 {
@@ -56,7 +57,7 @@ namespace App.Helpers
             return false;
         }
 
-        public static async Task<byte[]> UnZipAsync(byte[] data)
+        public static async Task<byte[]> UnZipAsync(byte[] data, CancellationToken cancellationToken)
         {
             return await Task.Run(() =>
             {
@@ -87,7 +88,7 @@ namespace App.Helpers
                 {
                     return null;
                 }
-            });
+            }, cancellationToken);
         }
 
         public static void CalculateBounds(MeshFilter meshFilter, out Bounds bounds)

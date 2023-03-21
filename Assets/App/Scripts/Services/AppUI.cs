@@ -2,8 +2,8 @@
 using System;
 using UnityEngine;
 using App.Infrastructure.Contexts;
-using App.Contexts.UI;
 using App.Infrastructure.UI;
+using App.UI.Contexts;
 
 namespace App.Services
 {

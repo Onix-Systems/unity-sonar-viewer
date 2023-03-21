@@ -13,7 +13,7 @@ using App.Services.SceneLoading;
 using App.Services.AppDataStoring;
 using App.Services.AppFSM;
 
-namespace App.Contexts
+namespace App.Core.Contexts
 {
     public class AppContext : MainContext
     {
@@ -29,11 +29,6 @@ namespace App.Contexts
             }
 
             Application.targetFrameRate = appConfig.TargetFrameRate;
-            SetupServices(services, appConfig);
-        }
-
-        private void SetupServices(List<object> services, AppConfig appConfig)
-        {
             Coroutiner coroutiner = gameObject.AddComponent<Coroutiner>();
 
             services.Add(appConfig);
@@ -56,7 +51,6 @@ namespace App.Contexts
             RESTClient restClient = new RESTClient(networkSettings);
             services.Add(restClient);
             services.Add(new SketchfabAPIFactory(restClient, sketchfabAPISettings));
-            services.Add(new SketchfabModelDownloader());
         }
 
         private AppConfig LoadAppConfig()

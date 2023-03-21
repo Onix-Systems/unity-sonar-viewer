@@ -7,6 +7,7 @@ namespace RestHTTP
         public bool IsSuccess { get; set; }
         public string Message { get; set; }
         public long StatusCode { get; set; }
+        public bool Aborted { get; set; }
     }
 
     public class Result
@@ -14,5 +15,6 @@ namespace RestHTTP
         public bool IsSuccess { get; set; }
         public string Message { get; set; }
         public long StatusCode { get; set; }
+        public bool Aborted { get; set; }
     }
 }

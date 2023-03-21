@@ -98,6 +98,7 @@ namespace RestHTTP
 
             _unityWebRequest.downloadHandler = downloadHandler;
             UnityWebRequestAsyncOperation webAsyncOperation = _unityWebRequest.SendWebRequest();
+            bool aborted = false;
 
             while (true)
             {
@@ -109,6 +110,7 @@ namespace RestHTTP
                 if (token.IsCancellationRequested)
                 {
                     Abort();
+                    aborted = true;
                 }
 
                 OnDownloadProgress?.Invoke(new RequestProgressData()
@@ -128,7 +130,8 @@ namespace RestHTTP
                 _unityWebRequest.responseCode,
                 downloadHandler.data,
                 _unityWebRequest.error,
-                _unityWebRequest.result == UnityWebRequest.Result.Success);
+                _unityWebRequest.result == UnityWebRequest.Result.Success, 
+                aborted);
 
             return response;
         }
