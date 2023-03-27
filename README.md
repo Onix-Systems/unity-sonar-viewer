@@ -1,4 +1,5 @@
-https://github.com/Onix-Systems/unity-sonar-viewer/blob/dev/Images~/AppVideo.mp4
+## App video
+https://user-images.githubusercontent.com/124143253/227535925-640429d8-1562-4d69-aab7-9fbac8aa9f99.mp4
 
 ## Description
 Sonar Viewer - app for 3D-model viewing in augmented reality. Models are downloaded from Sketchfab. The app allows the user to search models by name, vertices count, texture size and license type.
